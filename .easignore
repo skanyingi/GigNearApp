@@ -1,0 +1,15 @@
+node_modules
+.git
+.expo
+android
+ios
+*.log
+*.lock
+.DS_Store
+coverage
+__tests__
+docs
+.vscode
+*.md
+eas.json
+.gitignore

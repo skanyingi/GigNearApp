@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "NativeGigNear",
+    "name": "GigNear",
     "slug": "NativeGigNear",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -18,8 +18,9 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "edgeToEdgeEnabled": false,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.xmlink.NativeGigNear"
     },
     "web": {
       "output": "static",
@@ -43,6 +44,12 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "2bf6fe79-86fe-4d46-9e85-e19f7a878cd6"
+      }
     }
   }
 }
