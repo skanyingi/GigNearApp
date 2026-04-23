@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+# GigNear 🇰🇪
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A Kenyan gig economy mobile app connecting job seekers with employers for local manual labor and service jobs.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Dual Role System** - Choose between Job Seeker or Employer mode
+- **Bilingual UI** - English and Kiswahili support
+- **Offline-First** - Works without internet using cached data
+- **Job Discovery** - Browse local gigs in categories (Manual Labor, Cleaning, Delivery, Security, Gardening, Cooking)
+- **Easy Application** - One-tap apply to jobs
+- **Employer Dashboard** - Post jobs and manage applicants
+- **M-Pesa Ready** - Payment integration for job boosting (coming soon)
 
-   ```bash
-   npm install
-   ```
+## App Screens
 
-2. Start the app
+| Screen | Description |
+|--------|------------|
+| Language Selection | Choose English or Kiswahili |
+| Onboarding | 3-slide intro explaining app features |
+| Auth | Login with role selection (Worker/Employer) |
+| Jobs Feed | Browse and filter local job listings |
+| Search | Search jobs by category |
+| Job Detail | View job info, location map, requirements |
+| Apply | Submit application to employer |
+| Post Job | Employers create new job listings |
+| Chats | Message employers/applicants |
+| Profile | View and edit user profile |
+| Settings | Switch roles, language, preferences |
 
-   ```bash
-   npx expo start
-   ```
+## Tech Stack
 
-In the output, you'll find options to open the app in a
+- **Framework**: Expo (React Native)
+- **Navigation**: Expo Router (file-based routing)
+- **Icons**: Ionicons
+- **Maps**: OpenStreetMap via WebView
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Installation
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Build APK
 
-## Learn more
+```bash
+npx expo prebuild --platform android
+eas build --platform android --profile preview
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+app/
+├── index.tsx          # Language selection
+├── onboarding.tsx     # Intro carousel
+├── auth.tsx           # Login/signup
+├── (tabs)/            # Job seeker tabs
+│   ├── index.tsx      # Jobs feed
+│   ├── search.tsx     # Search
+│   ├── chats.tsx      # Conversations
+│   └── profile.tsx    # User profile
+├── (employer)/        # Employer tabs
+├── job-detail.tsx      # Job info
+├── apply.tsx          # Application form
+├── post-job.tsx       # Create job
+├── settings.tsx       # App settings
+└── components/        # Reusable components
+```
 
-## Join the community
+## License
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Private - All rights reserved
